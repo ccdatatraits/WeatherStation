@@ -1,2 +1,3 @@
 # WeatherStation
-IoT Weather Station App
+
+a [Sails](http://sailsjs.org) IoT Weather Station application
