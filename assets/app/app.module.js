@@ -8,13 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 const core_1 = require("@angular/core");
 const platform_browser_1 = require("@angular/platform-browser");
+const forms_1 = require("@angular/forms");
+const http_1 = require("@angular/http");
 const app_component_1 = require("./app.component");
+const weather_component_1 = require("./weather/weather.component");
+const weather_service_1 = require("./weather/weather.service");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([
     core_1.NgModule({
-        declarations: [app_component_1.AppComponent],
-        imports: [platform_browser_1.BrowserModule],
+        declarations: [app_component_1.AppComponent, weather_component_1.WeatherComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule],
+        providers: [weather_service_1.WeatherService],
         bootstrap: [app_component_1.AppComponent],
     })
 ], AppModule);
